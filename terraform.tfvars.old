@@ -1,0 +1,5 @@
+availability_zones = ["us-east-1a", "us-east-1b"]
+aws_region        = "us-east-1"
+cloudwatch_log_group_arn = "arn:aws:logs:us-east-1:123456789012:log-group:/aws/batch/job"
+role_name         = "batch-role"
+s3_bucket_arn     = "arn:aws:s3:::example-bucket"
