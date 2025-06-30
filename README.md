@@ -1,11 +1,11 @@
 # terraform-aws-batch-iam
 Terraform module to implement IAM roles and policies for AWS Batch least-privilege 
 
-Terraform Mock Provider Fake File for Testing
+## Terraform Mock Provider Fake File for Testing
 To create a mock provider configuration and variable definitions that would allow you to run terraform plan without errors, you can use the following approach:
 
-1. Create a mock.tf file
-hcl
+## Create a mock.tf file
+hcl```
 terraform {
   required_providers {
     aws = {
@@ -18,8 +18,9 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
-2. Create a variables.tf file with default values
-hcl
+```
+## Create a variables.tf file with default values
+hcl ```
 variable "availability_zones" {
   description = "List of availability zones for private subnets"
   type        = list(string)
@@ -49,16 +50,19 @@ variable "s3_bucket_arn" {
   type        = string
   default     = "arn:aws:s3:::example-bucket"
 }
-3. Create a terraform.tfvars file (optional)
-hcl
+```
+## Create a terraform.tfvars file (optional)
+hcl ```
 availability_zones = ["us-east-1a", "us-east-1b"]
 aws_region        = "us-east-1"
 cloudwatch_log_group_arn = "arn:aws:logs:us-east-1:123456789012:log-group:/aws/batch/job"
 role_name         = "batch-role"
 s3_bucket_arn     = "arn:aws:s3:::example-bucket"
-Usage
+```
+## Usage
 With these files in place, you can run:
 
-bash
+bash```
 terraform init
 terraform plan
+```
